@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: charter;
+  src: url(../fonts/Charter/charter_regular.woff2)
+}
+
+@font-face {
+  font-family: tenor;
+  src: url(../fonts/TenorSans/TenorSans-Regular.ttf)
+}
+
+@font-face {
+  font-family: noto;
+  src: url(../fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf)
+}
+
+
+h1 {
+  border: solid red;
+  text-align: center;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: charter;
+  font-weight: normal;
+}
+
+body {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: solid red;
+}
+
+ul {
+  list-style: none;
+  border: solid red;
+  padding: 1rem;
+  font-family: noto;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
