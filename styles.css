@@ -12,47 +12,94 @@
 
 @font-face {
   font-family: charter;
-  src: url(../fonts/Charter/charter_regular.woff2)
+  src: url(./fonts/Charter/charter_regular.woff2)
 }
 
 @font-face {
   font-family: tenor;
-  src: url(../fonts/TenorSans/TenorSans-Regular.ttf)
+  src: url(./fonts/TenorSans/TenorSans-Regular.ttf)
 }
 
 @font-face {
   font-family: noto;
-  src: url(../fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf)
+  src: url(./fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf)
 }
 
+html, body {
+  height: 100%;
+}
 
 h1 {
-  border: solid red;
+  background-color: orange;
   text-align: center;
-  width: 500px;
-  max-width: 100%;
   margin: 0 auto;
   padding: 1rem;
   font-family: charter;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 4px 4px 8px grey;
 }
 
-body {
+.recipelist {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  padding: 1rem;
-  border: solid red;
-}
-
-ul {
+  padding: 1rem 0 0 ;
   list-style: none;
-  border: solid red;
-  padding: 1rem;
   font-family: noto;
+  text-align: center;
 }
 
-.responsive {
+li {
+  max-width: 200px;
+  margin: 1rem 1rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.responsiveimage {
   width: 100%;
+  height: auto;
+  padding: 0;
+  border-radius: 70px;
+  margin-top: 10px;
+  box-shadow: 0 3px 10px 0 orange;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.responsiveimage:hover {
+  background-color: #f7bf6b;
+  border-radius: 50px;
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px 0 orange;
+}
+
+.recipename {
+  text-decoration: underline wavy orange;
+  color: black;
+  text-shadow: 4px 4px 8px grey;
+  padding: 3% 3%;
+  border-radius: 5px;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, text-decoration-color 0.3s ease
+}
+
+.recipename:hover {
+  background-color: orange;
+  color: white;
+  text-decoration: underline wavy white;
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px 0 white inset;
+}
+
+footer {
+  text-align: center;
+  padding: 0;
+}
+
+.responsivefooter {
+  width: 100%;
+  display: block;
   height: auto;
 }
