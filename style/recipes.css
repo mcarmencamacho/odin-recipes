@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: charter;
+  src: url(../fonts/Charter/charter_regular.woff2)
+}
+
+@font-face {
+  font-family: tenor;
+  src: url(../fonts/TenorSans/TenorSans-Regular.ttf)
+}
+
+@font-face {
+  font-family: noto;
+  src: url(../fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf)
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+header, main {
+    text-align: center;
+}
+
+.background{
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: black;
+    font-family: tenor;
+    font-size: 1rem;
+}
+  
+.background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../images/yatai.jpeg) no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+h1 {
+    background-color: orange;
+    max-width: 400px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0.5rem clamp(1rem, 5vw, 2rem);
+    font-family: charter;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    color: white;
+    text-shadow: 4px 4px 8px navy;
+    border-radius: 70px;
+    display: inline-block;
+    box-shadow: 0 0 30px 5px rgba(220, 209, 159);
+}
+
+.responsiveimage {
+    max-width: 500px;
+    width: 100%;
+    margin: 2rem auto;
+    height: auto;
+    border: 5px darkorange;
+    border-radius: 70px;
+    border-style: groove;
+    /*border-image: linear-gradient(#f6b73c, #4d9f0c) 30;*/
+    box-shadow: 5px 5px 30px 5px rgba(220, 209, 159);
+    display: block;
+}
+
+.servingsection,
+.ingredientsection,
+.recipestepsection {
+    max-width: 500px;
+    width: 100%;
+    margin: 3rem auto;
+    padding: 0.5rem;
+    border: 5px darkorange;
+    border-radius: 50px;
+    border-style: groove;
+    box-shadow: 5px 5px 30px 5px rgba(220, 209, 159);
+    background: blanchedalmond;
+    opacity: 0.7;
+    text-align: center;
+}
+
+h2, span {
+    font-weight: bold;
+    font-family: noto;
+    padding: 0.6rem;
+}
+
+p {
+    padding: 0 1rem 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    text-justify: inter-word;
+}
+
+.ingredientslist {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem auto 1.5rem;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 1px solid darkorange;
+    background-color: darkorange;
+    color: white;
+    font-family: noto;
+    font-weight: bold;
+}
+
+.row-1 {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.row-2 {
+    background-color: rgba(255, 165, 0, 0.4);
+}
+
+.ingredient-column-item {
+    border-right: 2px solid orange;
+}
+
+.cooking-instructions-list,
+.cookingstep {
+    list-style: inside;
+    padding-bottom: 0.5rem;
+}
+
+.cooking-instructions-title {
+    text-align: start;
+    padding: 0.7rem;
+}
+
+.steptitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.cooking-instructions-list {
+    list-style: none;
+    counter-reset: steps;
+}
+
+.cookingstep {
+    list-style: none;
+}
+
+ol .cookingstep {
+    counter-increment: steps;
+    padding-left: 1rem;
+}
+
+.cookingstep::before {
+    content: counter(steps);
+    margin-right: 0.5rem;
+    background: navy;
+    color: white;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    line-height: 1.2em;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: orange;
+    height: auto;
+}
+
+footer a {
+    /*margin: 0 auto;*/
+    display: inline;
+    padding: 0.5rem 1rem;
+    font-family: charter;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+    text-shadow: 4px 4px 8px grey;
+    text-decoration: none;
+    /*text-transform: uppercase;*/
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+footer a:hover {
+    background-color: navy;
+    border-radius: 50px;
+    border-color: rgb(255, 115, 0);
+    color: white;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+  
+footer a:active {
+    top: 5px;
+}
